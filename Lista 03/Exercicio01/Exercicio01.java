@@ -3,7 +3,7 @@ package Exercicio01;
 import java.util.Scanner;
 
 public class Exercicio01 {
-    public void execute(){
+    public static void execute(){
 
         Scanner read = new Scanner(System.in);
 
