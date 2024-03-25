@@ -2,7 +2,6 @@ package Exercicio11;
 
 import java.util.Scanner;
 
-
 public class Exercicio11 {
     public static void execute(){
 
