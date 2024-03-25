@@ -22,6 +22,9 @@ public class Exercicio08 {
             System.out.println((i+1) + "° nota: " + aluno.getGrade(i));
         }
         System.out.println("Média aritmética: " + aluno.calculateArithmetic(qnt));
+        if(aluno.calculateArithmetic(qnt) >= 7) System.out.println("Aprovado!");
+        if(aluno.calculateArithmetic(qnt) <= 5) System.out.println("Reprovado!");
+        if(aluno.calculateArithmetic(qnt) > 5 && aluno.calculateArithmetic(qnt) < 7) System.out.println("Aprovado!");
 
         read.close();
     }
