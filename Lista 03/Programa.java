@@ -7,7 +7,8 @@
 // import Exercicio07.Exercicio07;
 // import Exercicio08.Exercicio08;
 // import Exercicio09.Exercicio09;
-import Exercicio10.Exercicio10;
+// import Exercicio10.Exercicio10;
+import Exercicio11.Exercicio11;
 
 public class Programa {
     public static void main(String[] args) {
@@ -29,7 +30,10 @@ public class Programa {
         // Exercicio08.execute();
 
         // Exercicio09.execute();
-        Exercicio10.execute();
+
+        // Exercicio10.execute();
+
+        Exercicio11.execute();
         
     }
 }
