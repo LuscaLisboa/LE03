@@ -7,7 +7,7 @@ public class Exercicio11 {
 
         Scanner read = new Scanner(System.in);
 
-        int qnt = 5;
+        int qnt = 56;
         Persons[] pessoa = new Persons[qnt];
 
         for(int i = 0; i < qnt; i++) {
