@@ -7,29 +7,27 @@ public class Exercicio11 {
 
         Scanner read = new Scanner(System.in);
 
-        Persons pessoa = new Persons();
-
         int qnt = 5;
-        pessoa.initializeName(qnt);
-        pessoa.initializeGender(qnt);
+        Persons[] pessoa = new Persons[qnt];
 
         for(int i = 0; i < qnt; i++) {
+            pessoa[i] = new Persons();
             System.out.println("Informe o nome da " + (i+1) + "° pessoa: ");
-            pessoa.setName(i, read.nextLine());
+            pessoa[i].setName(read.nextLine());
 
             System.out.println("Informe o sexo da " + (i+1) + "° pessoa [M ou F]: ");
-            pessoa.setGender(i, read.nextLine().charAt(0));
+            pessoa[i].setGender(read.nextLine().charAt(0));
         }
 
         int sumM = 0;
         int sumF = 0;
         for(int i = 0; i < qnt; i++) {
-            if(pessoa.getGender(i) == 'M') {
-                System.out.println("Nome: " + pessoa.getName(i) + " - Sexo: " + pessoa.getGender(i));
+            if(pessoa[i].getGender() == 'M') {
+                System.out.println("Nome: " + pessoa[i].getName() + " - Sexo: " + pessoa[i].getGender());
                 sumM++;
             }
-            if(pessoa.getGender(i) == 'F') {
-                System.out.println("Nome: " + pessoa.getName(i) + " - Sexo: " + pessoa.getGender(i));
+            if(pessoa[i].getGender() == 'F') {
+                System.out.println("Nome: " + pessoa[i].getName() + " - Sexo: " + pessoa[i].getGender());
                 sumF++;
             }
         }

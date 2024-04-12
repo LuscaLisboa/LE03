@@ -2,30 +2,23 @@ package Exercicio11;
 
 public class Persons {
 
-    private String[] name;
-    private char[] gender;
-
-    public void initializeName(int qnt){
-        name = new String[qnt];
-    }
-    public void initializeGender(int qnt){
-        gender = new char[qnt];
-    }
+    private String name;
+    private char gender;
 
     // Name
-    public void setName(int index, String sName){
-        name[index] = sName;
+    public void setName(String sName){
+        this.name = sName;
     }
-    public String getName(int index){
-        return name[index];
+    public String getName(){
+        return this.name;
     }
 
     // Gender
-    public void setGender(int index, char sGender){
+    public void setGender(char sGender){
         sGender = Character.toUpperCase(sGender);
-        gender[index] = sGender;
+        this.gender = sGender;
     }
-    public char getGender(int index){
-        return gender[index];
+    public char getGender(){
+        return this.gender;
     }
 }
