@@ -7,18 +7,17 @@ public class Exercicio10 {
 
         Scanner read = new Scanner(System.in);
 
-        Persons pessoa = new Persons();
-
         int qnt = 5;
-        pessoa.initializeAge(qnt);
+        Persons[] pessoa = new Persons[qnt];
 
         for(int i = 0; i < qnt; i++){
+            pessoa[i] = new Persons();
             System.out.println("Informe a idade da " + (i+1) + "° pessoa: ");
-            pessoa.setAge(i, read.nextInt());
+            pessoa[i].setAge(read.nextInt());
         }
         for(int i = 0; i < qnt; i++){
-            if(pessoa.getAge(i) < 18) System.out.println("A " + (i+1) + "° pessoa é MENOR de idade: " + pessoa.getAge(i));
-            if(pessoa.getAge(i) >= 18) System.out.println("A " + (i+1) + "° pessoa é MAIOR de idade: " + pessoa.getAge(i));
+            if(pessoa[i].getAge() < 18) System.out.println("A " + (i+1) + "° pessoa é MENOR de idade: " + pessoa[i].getAge());
+            if(pessoa[i].getAge() >= 18) System.out.println("A " + (i+1) + "° pessoa é MAIOR de idade: " + pessoa[i].getAge());
         }
 
         read.close();

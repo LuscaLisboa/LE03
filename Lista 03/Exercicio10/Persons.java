@@ -2,17 +2,13 @@ package Exercicio10;
 
 public class Persons {
 
-    private int[] age;
-
-    public void initializeAge(int qnt){
-        age = new int[qnt];
-    }
+    private int age;
 
     // Age
-    public void setAge(int index, int sAge){
-        age[index] = sAge;
+    public void setAge(int sAge){
+        this.age = sAge;
     }
-    public int getAge(int index){
-        return age[index];
+    public int getAge(){
+        return this.age;
     }
 }
