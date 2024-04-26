@@ -1,5 +1,6 @@
 package Exercicio18;
-public class AbonoSalario{
+
+public class AbonoSalario {
     private String nome;
     private int idade;
     private char sexo;
@@ -9,10 +10,10 @@ public class AbonoSalario{
     }
 
     // public Abono(String nome, int idade, char sexo, double salario) {
-    //     this.nome = nome;
-    //     this.idade = idade;
-    //     this.sexo = sexo;
-    //     this.salario = salario;
+    // this.nome = nome;
+    // this.idade = idade;
+    // this.sexo = sexo;
+    // this.salario = salario;
     // }
 
     public String getNome() {
