@@ -1,11 +1,12 @@
 package Exercicio17;
+
 import java.util.Scanner;
 
 public class Exercicio17 {
-    public void executar(){
+    public static void executar() {
         Scanner leitor = new Scanner(System.in);
         Funcionario funcionario = new Funcionario();
-        
+
         System.out.print("Informe o nome do funcionário: ");
         String nomeFuncionario = leitor.nextLine();
         System.out.print("Informe o salário do funcionário em reais: ");

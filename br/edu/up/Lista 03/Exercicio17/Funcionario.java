@@ -1,9 +1,9 @@
 package Exercicio17;
 
 public class Funcionario {
-    public String nomeFuncionario;
-    public double salario;
-    public double salarioMinimo;
+    private String nomeFuncionario;
+    private double salario;
+    private double salarioMinimo;
 
     // public Funcionario(String nomeFuncionario, double salario, double salarioMinimo) {
     //     this.nomeFuncionario = nomeFuncionario;
