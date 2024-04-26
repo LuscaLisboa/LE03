@@ -3,7 +3,7 @@ package Exercicio19;
 import java.util.Scanner;
 
 public class Exercicio19 {
-    public void executar() {
+    public static void executar() {
 
         Scanner leitor = new Scanner(System.in);
 
@@ -16,8 +16,30 @@ public class Exercicio19 {
         System.out.println("Informe o 3° lado do triângulo: ");
         triangulo.setLado3(leitor.nextInt());
 
-        
+        compararLados(triangulo);
 
         leitor.close();
+    }
+
+    public static void compararLados(Triangulo triangulo) {
+        if (triangulo.getLado1() == triangulo.getLado2()) {
+            if (triangulo.getLado1() == triangulo.getLado3()) {
+                System.out.println("Triângulo equilátero.");
+            }
+        }
+        if (triangulo.getLado1() == triangulo.getLado2()) {
+            if (triangulo.getLado1() != triangulo.getLado3()) {
+                System.out.println("Triângulo isósceles.");
+            }
+        }
+        if (triangulo.getLado1() != triangulo.getLado2()) {
+            if (triangulo.getLado1() == triangulo.getLado3()) {
+                System.out.println("Triângulo isósceles.");
+            }
+        }
+        if (triangulo.getLado1() != triangulo.getLado2() && triangulo.getLado1() != triangulo.getLado3()
+                && triangulo.getLado2() != triangulo.getLado3()) {
+            System.out.println("Triângulo escaleno.");
+        }
     }
 }
