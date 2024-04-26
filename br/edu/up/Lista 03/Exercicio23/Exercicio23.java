@@ -16,29 +16,29 @@ public class Exercicio23 {
 
         int idade = leitor.nextInt();
 
-        double Pessoa;
-        if (sexo == 'M' || sexo == 'm') {
-            if (altura > 1.70) {
+        double pesoIdeal;
+        if (pessoa.sexo == 'M' || pessoa.sexo == 'm') {
+            if (pessoa.altura > 1.70) {
                 if (idade <= 20)
-                    Pessoa = (72.7 * altura) - 58;
+                    pesoIdeal = (72.7 * pessoa.altura) - 58;
                 else if (idade >= 21 && idade <= 39)
-                    Pessoa = (72.7 * altura) - 53;
+                    pesoIdeal = (72.7 * pessoa.altura) - 53;
                 else
-                    Pessoa = (72.7 * altura) - 45;
+                    pesoIdeal = (72.7 * pessoa.altura) - 45;
             } else {
                 if (idade <= 40)
-                    Pessoa = (72.7 * altura) - 50;
+                    pesoIdeal = (72.7 * pessoa.altura) - 50;
                 else
-                    Pessoa = (72.7 * altura) - 58;
+                    pesoIdeal = (72.7 * pessoa.altura) - 58;
             }
-        } else if (sexo == 'F' || sexo == 'f') {
-            if (altura > 1.50) {
+        } else if (pessoa.sexo == 'F' || pessoa.sexo == 'f') {
+            if (pessoa.altura > 1.50) {
                 if (idade >= 35)
-                    Pessoa = (62.1 * altura) - 45;
+                    pesoIdeal = (62.1 * pessoa.altura) - 45;
                 else
-                    Pessoa = (62.1 * altura) - 49;
+                    pesoIdeal = (62.1 * pessoa.altura) - 49;
             } else {
-                Pessoa = (62.1 * altura) - 44.7;
+                pesoIdeal = (62.1 * pessoa.altura) - 44.7;
             }
         } else {
             System.out.println("Sexo inválido, utilize M ou F.");
@@ -46,10 +46,9 @@ public class Exercicio23 {
             return;
         }
 
-        System.out.println("Nome: " + nome);
-        System.out.println("Peso Ideal: " + Pessoa + " kg");
+        System.out.println("Nome: " + pessoa.nome);
+        System.out.println("Peso Ideal: " + pesoIdeal + " kg");
 
         leitor.close();
     }
 }
-
