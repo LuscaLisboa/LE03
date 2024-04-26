@@ -1,3 +1,4 @@
+
 //import Exercicio01.Exercicio01;
 // import Exercicio02.Exercicio02;
 // import Exercicio03.Exercicio03;
@@ -18,7 +19,7 @@ import Exercicio16.Exercicio16;
 public class Programa {
     public static void main(String[] args) {
 
-        //Exercicio01.execute();
+        // Exercicio01.execute();
 
         // Exercicio02.execute();
 
@@ -39,7 +40,7 @@ public class Programa {
         // Exercicio10.execute();
 
         // Exercicio11.execute();
-        
+
         // Exercicio12.execute();
 
         // Exercicio13.execute();
@@ -49,6 +50,6 @@ public class Programa {
         // Exercicio15.execute();
 
         Exercicio16.execute();
-        
+
     }
 }
