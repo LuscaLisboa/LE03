@@ -2,7 +2,7 @@ package Exercicio22;
 import java.util.Scanner;
 
 public class Exercicio22 {
-    public void executar(){
+    public void execute(){
         Scanner leitor = new Scanner(System.in);
         ContaLuz cl = new ContaLuz();
         System.out.println("Digite seu tipo de cliente: 1-residencia - 2-comercio - 3-industria");
@@ -29,9 +29,7 @@ public class Exercicio22 {
         }
 
         double valorConta = qtdKwh * valorKWh;
-
         System.out.println("O valor da conta será: R$"+valorConta);
-
         leitor.close();
     }
 
