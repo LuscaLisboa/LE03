@@ -1,9 +1,9 @@
 package Exercicio24;
 
 public class EstudanteDois{
-    public double notaLab;
-    public double notaSemestral;
-    public double exameFinal;
+    private double notaLab;
+    private double notaSemestral;
+    private double exameFinal;
 
     public EstudanteDois() {
     }
