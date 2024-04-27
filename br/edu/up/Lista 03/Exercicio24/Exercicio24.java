@@ -1,7 +1,8 @@
 package Exercicio24;
 import java.util.Scanner;
 
-public void exercicio24(){
+public class Exercicio24{
+    public static void executar(){
     Scanner leitor = new Scanner(System.in);
     EstudanteDois estudantedois = new EstudanteDois();
 
@@ -14,7 +15,8 @@ public void exercicio24(){
 
     if (notaLab < 0 || notaLab > 10 ||
         notaAvaliacaoSemestral < 0 || notaAvaliacaoSemestral > 10 ||
-        notaExameFinal < 0 || notaExameFinal > 10) {
+        notaExameFinal < 0 || notaExameFinal > 10) 
+    {
         System.out.println("As notas devem estar no intervalo de 0 a 10.");
         leitor.close();
         return;
@@ -30,5 +32,5 @@ public void exercicio24(){
     System.out.println("A nota final do estudante é: " + notaFinal);
 
     leitor.close();
+    }
 }
-
