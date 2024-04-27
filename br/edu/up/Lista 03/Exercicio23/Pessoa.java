@@ -9,14 +9,6 @@ public class Pessoa {
     public Pessoa() {
     }
 
-
-    // public PesoIdeal(String nome, char sexo, double altura, int idade) {
-    //     this.nome = nome;
-    //     this.sexo = sexo;
-    //     this.altura = altura;
-    //     this.idade = idade;
-    // }
-
     public String getNome() {
         return this.nome;
     }
