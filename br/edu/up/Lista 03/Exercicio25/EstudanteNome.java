@@ -1,11 +1,11 @@
 package Exercicio25;
 
 public class EstudanteNome{
-    public String nome;
-    public int matricula;
-    public double notaLaboratorio;
-    public double notaSemestral;
-    public double exameFinal;
+    private String nome;
+    private int matricula;
+    private double notaLaboratorio;
+    private double notaSemestral;
+    private double exameFinal;
 
 
     public EstudanteNome() {
