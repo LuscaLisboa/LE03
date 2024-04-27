@@ -1,44 +1,45 @@
 package Exercicio23;
+
 import java.util.Scanner;
 
 public class Exercicio23 {
-    public static void executar(){
+    public static void executar() {
         Scanner leitor = new Scanner(System.in);
 
         Pessoa pessoa = new Pessoa();
-        System.out.print("Informe o nome da pessoa: ");
-        pessoa.nome = leitor.nextLine();
-        System.out.print("Informe o sexo da pessoa (M/F): ");
-        pessoa.sexo = leitor.next().charAt(0);
-        System.out.print("Informe a altura da pessoa em metros: ");
-        pessoa.altura = leitor.nextDouble();
-        System.out.print("Informe a idade da pessoa: ");
 
-        int idade = leitor.nextInt();
+        System.out.print("Informe o nome da pessoa: ");
+        pessoa.setNome(leitor.nextLine());
+        System.out.print("Informe o sexo da pessoa (M/F): ");
+        pessoa.setSexo(leitor.next().charAt(0));
+        System.out.print("Informe a altura da pessoa em metros: ");
+        pessoa.setAltura(leitor.nextDouble());
+        System.out.print("Informe a idade da pessoa: ");
+        pessoa.setIdade(leitor.nextInt());
 
         double pesoIdeal;
-        if (pessoa.sexo == 'M' || pessoa.sexo == 'm') {
-            if (pessoa.altura > 1.70) {
-                if (idade <= 20)
-                    pesoIdeal = (72.7 * pessoa.altura) - 58;
-                else if (idade >= 21 && idade <= 39)
-                    pesoIdeal = (72.7 * pessoa.altura) - 53;
+        if (pessoa.getSexo() == 'M' || pessoa.getSexo() == 'm') {
+            if (pessoa.getAltura() > 1.70) {
+                if (pessoa.getIdade() <= 20)
+                    pesoIdeal = (72.7 * pessoa.getAltura()) - 58;
+                else if (pessoa.getIdade() >= 21 && pessoa.getIdade() <= 39)
+                    pesoIdeal = (72.7 * pessoa.getAltura()) - 53;
                 else
-                    pesoIdeal = (72.7 * pessoa.altura) - 45;
+                    pesoIdeal = (72.7 * pessoa.getAltura()) - 45;
             } else {
-                if (idade <= 40)
-                    pesoIdeal = (72.7 * pessoa.altura) - 50;
+                if (pessoa.getIdade() <= 40)
+                    pesoIdeal = (72.7 * pessoa.getAltura()) - 50;
                 else
-                    pesoIdeal = (72.7 * pessoa.altura) - 58;
+                    pesoIdeal = (72.7 * pessoa.getAltura()) - 58;
             }
-        } else if (pessoa.sexo == 'F' || pessoa.sexo == 'f') {
-            if (pessoa.altura > 1.50) {
-                if (idade >= 35)
-                    pesoIdeal = (62.1 * pessoa.altura) - 45;
+        } else if (pessoa.getSexo() == 'F' || pessoa.getSexo() == 'f') {
+            if (pessoa.getAltura() > 1.50) {
+                if (pessoa.getIdade() >= 35)
+                    pesoIdeal = (62.1 * pessoa.getAltura()) - 45;
                 else
-                    pesoIdeal = (62.1 * pessoa.altura) - 49;
+                    pesoIdeal = (62.1 * pessoa.getAltura()) - 49;
             } else {
-                pesoIdeal = (62.1 * pessoa.altura) - 44.7;
+                pesoIdeal = (62.1 * pessoa.getAltura()) - 44.7;
             }
         } else {
             System.out.println("Sexo inválido, utilize M ou F.");
@@ -46,7 +47,7 @@ public class Exercicio23 {
             return;
         }
 
-        System.out.println("Nome: " + pessoa.nome);
+        System.out.println("Nome: " + pessoa.getNome());
         System.out.println("Peso Ideal: " + pesoIdeal + " kg");
 
         leitor.close();
