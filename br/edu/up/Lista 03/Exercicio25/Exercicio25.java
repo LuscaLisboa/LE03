@@ -1,25 +1,32 @@
 package Exercicio25;
+
 import java.util.Scanner;
 
-public class Exercicio25{
-    public void executar(){
-        Scanner leitor = new Scanner(System.in);
-        System.out.print("Informe o nome do estudante: ");
+public class Exercicio25 {
+    public void executar() {
 
-        String nome = leitor.nextLine();
+        Scanner leitor = new Scanner(System.in);
+
+        EstudanteNome estudante = new EstudanteNome();
+
+        System.out.print("Informe o nome do estudante: ");
+        estudante.setNome(leitor.nextLine());
+
         System.out.print("Informe o número de matrícula do estudante: ");
-        int matricula = leitor.nextInt();
+        estudante.setMatricula(leitor.nextInt());
+
         System.out.print("Informe a nota do trabalho de laboratório: ");
-        double notaLaboratorio = leitor.nextDouble();
+        estudante.setNotaLaboratorio(leitor.nextDouble());
+
         System.out.print("Informe a nota da avaliação semestral: ");
-        double notaAvaliacaoSemestral = leitor.nextDouble();
+        estudante.setNotaSemestral(leitor.nextDouble());
+
         System.out.print("Informe a nota do exame final: ");
-        double notaExameFinal = leitor.nextDouble();
-        EstudanteNome estudantenome= new EstudanteNome();
-    
-        if (notaLaboratorio < 0 || notaLaboratorio > 10 ||
-            notaAvaliacaoSemestral < 0 || notaAvaliacaoSemestral > 10 ||
-            notaExameFinal < 0 || notaExameFinal > 10) {
+        estudante.setExameFinal(leitor.nextDouble());
+
+        if (estudante.getNotaLaboratorio() < 0 || estudante.getNotaLaboratorio() > 10 ||
+                estudante.getNotaSemestral() < 0 || estudante.getNotaSemestral() > 10 ||
+                estudante.getExameFinal() < 0 || estudante.getExameFinal() > 10) {
             System.out.println("As notas devem estar no intervalo de 0 a 10.");
             leitor.close();
             return;
@@ -28,26 +35,27 @@ public class Exercicio25{
         double pesoLaboratorio = 2;
         double pesoAvaliacaoSemestral = 3;
         double pesoExameFinal = 5;
-        double notaF = (notaLaboratorio * pesoLaboratorio +
-                        notaAvaliacaoSemestral * pesoAvaliacaoSemestral +
-                        notaExameFinal * pesoExameFinal) / (pesoLaboratorio + pesoAvaliacaoSemestral + pesoExameFinal);
+        double notaF = (estudante.getNotaLaboratorio() * pesoLaboratorio +
+                estudante.getNotaSemestral() * pesoAvaliacaoSemestral +
+                estudante.getExameFinal() * pesoExameFinal)
+                / (pesoLaboratorio + pesoAvaliacaoSemestral + pesoExameFinal);
 
-        String class;
+        String classe;
         if (notaF >= 8 && notaF <= 10) {
-            class = "A";
+            classe = "A";
         } else if (notaF >= 7 && notaF < 8) {
-            class = "B";
+            classe = "B";
         } else if (notaF >= 6 && notaF < 7) {
-            class = "C";
+            classe = "C";
         } else if (notaF >= 5 && notaF < 6) {
-            class = "D";
+            classe = "D";
         } else {
-            class = "R";
+            classe = "R";
         }
-        System.out.println("Nome do estudante: " + nome);
-        System.out.println("Número de matrícula: " + matricula);
+        System.out.println("Nome do estudante: " + estudante.getNome());
+        System.out.println("Número de matrícula: " + estudante.getMatricula());
         System.out.println("Nota final: " + notaF);
-        System.out.println("Classificação: " + class);
+        System.out.println("Classificação: " + classe);
         leitor.close();
     }
 }
