@@ -3,7 +3,7 @@ package Exercicio25;
 import java.util.Scanner;
 
 public class Exercicio25 {
-    public void executar() {
+    public static void executar() {
 
         Scanner leitor = new Scanner(System.in);
 
